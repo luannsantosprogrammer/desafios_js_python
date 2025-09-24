@@ -1,0 +1,136 @@
+body{
+    margin:0px;
+    padding: 0;
+}
+.titulo{
+    height: 60px;
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+.letra2{
+    margin-left: 5px;
+}
+#jogo{
+    display: grid;
+    grid-template-columns: 2fr 3f;
+    grid-template-areas: 
+    "sequencia sequencia quadrados quadrados quadrados";
+    margin-top: 100px;
+}
+#sequencia{
+    grid-area: sequencia;
+}
+#quadrados{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    grid-area: quadrados;
+    z-index: 0;
+}
+/* editando parte dos quadrados */
+.padrao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+}
+.quadrantes{
+    display: flex;
+    flex-direction: row;
+}
+.quadrado1{background-color: #FF0000;}
+.quadrado2{background-color: #00FF00;}
+.quadrado3{background-color: #0000FF;}
+.quadrado4{background-color: #00FFFF;}
+.quadrado5{background-color: #FF00FF;}
+.quadrado6{background-color: #FFA500;}
+.quadrado7{background-color: #800080;}
+.quadrado8{background-color: #808080;}
+.quadrado9{background-color: #FFFF00;}
+
+#quadrados{
+    display: flex;
+    flex-direction: column;
+}
+
+/* editando vez do jogador */
+.jogador1{
+    border: 3px solid #7a7a7a;
+    background-color: #FF5733;
+}
+.jogador2{
+    border: 3px solid #7a7a7a;
+}
+
+
+.chis1{
+    position: relative;
+    height: 50px;
+    width: 0;
+    border: solid 5px black;
+    transform: rotate(45deg);
+    z-index: 0;
+}
+.chis2{
+    position: absolute;
+    height: 50px;
+    width: 0;
+    border: solid 5px black;
+    transform: rotate(-45deg);
+    z-index: 0;
+}
+.bola{
+    width: 50px;
+    height: 50px;
+    border: solid black 5px;
+    border-radius: 100%;
+}
+
+.win{
+    position: absolute;
+    display: none;
+    justify-content: center;
+    width: 250px;
+    height: 60px;
+    left: 50px;
+    z-index: 1;
+    border: #0000FF solid 2px;
+    box-shadow: #0000FF 2px 2px;
+    background-color: aliceblue;
+    animation-name: none;
+    animation-duration: 3s;
+}
+
+
+@keyframes vencedor {
+    0%{margin-bottom: 500px;left: 500px;}
+    25%{height: 60px;margin-bottom: 0px;left: 50px;}
+    50%{height: 20px;margin-bottom: 150px;left: 50px;}
+    100%{height: 60px;margin-bottom: 0px;left: 50px;}
+}
+
+
+@keyframes cor {
+    0%{color:#FF0000}
+    15%{color: #0000FF;}
+    25%{color: #008000;}
+    40%{color: #FFFF00;}
+    50%{color: #FFA500;}
+    80%{color: #800080;}
+    100%{color: #FFC0CB;}
+
+}
+.j{animation: cor 3s infinite 1s} 
+.o{animation: cor 3s infinite 1.2s}
+.g{animation: cor 3s infinite 1.3s}
+.d{animation: cor 3s infinite 1.4s}
+.a{animation: cor 3s infinite 1.5s}
+.v{animation: cor 3s infinite 1.6s}
+.e{animation: cor 3s infinite 1.7s}
+.l{animation: cor 3s infinite 1.8s}
+.h{animation: cor 3s infinite 1.9s}
