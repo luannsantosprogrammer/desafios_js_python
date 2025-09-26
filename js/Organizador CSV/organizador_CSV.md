@@ -70,8 +70,4 @@ Este projeto é uma pequena aplicação web feita em **HTML, CSS e JavaScript** 
 - **CSS3** com animações para estilo e experiência do usuário.
 - **JavaScript** puro para manipulação dos arquivos e download.
 
----
 
-## 📸 Preview
-
-> Adicione aqui um gif ou imagem mostrando o funcionamento se quiser deixar seu README mais atrativo.
